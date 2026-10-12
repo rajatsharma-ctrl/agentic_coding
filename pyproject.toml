@@ -13,3 +13,6 @@ dependencies = [
     "requests",
     "schedule",
 ]
+
+[tool.setuptools]
+py-modules = ["graph", "nodes", "state", "config", "linkedin_client", "scheduler", "fetch_linkedin_posts"]
