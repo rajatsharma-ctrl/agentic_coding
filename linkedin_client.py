@@ -129,7 +129,12 @@ def _save_token(token_resp: dict, person_urn: str) -> dict:
 
 
 def get_token_data() -> dict:
-    """Return cached token data, running OAuth flow if needed."""
+    """Return token data — from env vars (cloud) or cached file (local OAuth)."""
+    env_token = os.getenv("LINKEDIN_ACCESS_TOKEN")
+    env_urn = os.getenv("LINKEDIN_PERSON_URN")
+    if env_token and env_urn:
+        return {"access_token": env_token, "person_urn": env_urn}
+
     cached = _load_cached_token()
     if cached:
         return cached
