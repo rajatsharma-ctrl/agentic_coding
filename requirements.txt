@@ -1,0 +1,9 @@
+langgraph
+langchain-openai
+langchain-community
+langchain-core
+python-dotenv
+pydantic
+beautifulsoup4
+requests
+schedule

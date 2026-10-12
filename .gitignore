@@ -1,0 +1,19 @@
+# Credentials and secrets — never commit these
+.env
+.linkedin_token.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Claude Code
+.claude/
+
+# macOS
+.DS_Store
