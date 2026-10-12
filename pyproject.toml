@@ -1,0 +1,15 @@
+[project]
+name = "linkedin-posting-agent"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph",
+    "langchain-openai",
+    "langchain-community",
+    "langchain-core",
+    "python-dotenv",
+    "pydantic",
+    "beautifulsoup4",
+    "requests",
+    "schedule",
+]

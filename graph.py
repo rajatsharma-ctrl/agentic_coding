@@ -1,4 +1,3 @@
-from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import END, START, StateGraph
 from langgraph.types import Send
 
@@ -60,9 +59,7 @@ builder.add_edge("human_review", "save_post")
 builder.add_edge("save_post", "publish_post")
 builder.add_edge("publish_post", END)
 
-# MemorySaver is required for interrupt() in human_review to work
-memory = MemorySaver()
-graph = builder.compile(checkpointer=memory)
+graph = builder.compile()
 
 
 # ── Run ───────────────────────────────────────────────────────────────────────
